@@ -28,7 +28,7 @@
     "icon": "",
     "enabled": true,
     "extIcon": "",
-    "readme": "https://example.invalid/iobroker.zendure-ip/blob/main/README.md",
+    "readme": "https://github.com/Andiweli/Zendure-IP/blob/main/README.md",
     "loglevel": "info",
     "mode": "daemon",
     "type": "energy",
