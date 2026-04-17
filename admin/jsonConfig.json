@@ -8,7 +8,7 @@
       "items": {
         "devicesInfo": {
           "type": "staticText",
-          "text": "Configure up to 10 Zendure devices. The adapter polls http://<ip>/properties/report."
+          "text": "Configure up to 10 Zendure devices. The adapter polls http://<ip>/properties/report. Enable 'Device is in HEMS' for devices that should be included in the aggregated HEMS object tree."
         },
         "devices": {
           "newLine": true,
@@ -21,13 +21,13 @@
               "type": "text",
               "attr": "name",
               "title": "Device name",
-              "width": "35%"
+              "width": "28%"
             },
             {
               "type": "text",
               "attr": "ip",
               "title": "IP address",
-              "width": "35%"
+              "width": "28%"
             },
             {
               "type": "number",
@@ -35,7 +35,14 @@
               "title": "Interval (s)",
               "min": 1,
               "step": 1,
-              "width": "20%"
+              "default": 10,
+              "width": "18%"
+            },
+            {
+              "type": "checkbox",
+              "attr": "isInHems",
+              "title": "Device is in HEMS",
+              "width": "18%"
             }
           ]
         }
