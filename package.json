@@ -5,10 +5,10 @@
   "author": "OpenAI",
   "license": "MIT",
   "main": "main.js",
-  "repository": {
-    "type": "git",
-    "url": "https://example.invalid/iobroker.zendure-ip.git"
-  },
+"repository": {
+  "type": "git",
+  "url": "https://github.com/Andiweli/Zendure-IP.git"
+},
   "keywords": [
     "iobroker",
     "zendure",
