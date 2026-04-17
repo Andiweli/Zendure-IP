@@ -1,0 +1,24 @@
+{
+  "name": "iobroker.zendure-ip",
+  "version": "0.1.0",
+  "description": "Simple ioBroker adapter to poll Zendure devices locally by IP and mirror their JSON into states.",
+  "author": "OpenAI",
+  "license": "MIT",
+  "main": "main.js",
+  "repository": {
+    "type": "git",
+    "url": "https://example.invalid/iobroker.zendure-ip.git"
+  },
+  "keywords": [
+    "iobroker",
+    "zendure",
+    "local",
+    "polling"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@iobroker/adapter-core": "^3.3.2"
+  }
+}
