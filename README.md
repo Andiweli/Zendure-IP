@@ -1,45 +1,67 @@
 # ioBroker.zendure-ip
 
-Simple ioBroker adapter to poll local Zendure device JSON from `http://<ip>/properties/report`
-for up to 10 devices and store the returned data as states.
+Simple local polling adapter for Zendure devices.
 
 ## Features
 
-- Configure up to 10 devices
-- Per device:
-  - name
-  - IP address
-  - polling interval in seconds
-- Default polling interval: 10 seconds
-- Device folder name is derived from the configured name
+- Up to 10 devices
+- Per device: name, IP, poll interval, `Device is in HEMS`
+- Device names become channel names under the adapter namespace
 - Spaces in names are converted to `-`
-- Polls all JSON data recursively into states
-- Creates helper states under `info.*`:
-  - `online`
-  - `lastUpdate`
-  - `lastError`
-  - `rawJson`
+- Polls `http://<ip>/properties/report`
+- Stores a curated device state set based on the user's working scripts
+- Creates an additional `HEMS` object tree when at least one device is marked as `Device is in HEMS`
 
-## Installation
+## Device states
 
-### As a local/custom adapter
-- Unpack this folder
-- Install it as a custom adapter in ioBroker
+Per device the adapter writes curated states such as:
 
-### Via GitHub
-Put the contents into a repository named:
+- `soc`
+- `acPowerW`
+- `acDirectionW`
+- `acChargingW`
+- `acDischargingW`
+- `solarInputPower`
+- `solarPower1..4`
+- `outputPackPower`
+- `packInputPower`
+- `minSocRaw`, `minSocPct`
+- `socSetRaw`, `socSetPct`
+- `online`, `lastUpdate`, `ageSec`, `stale`, `rssi`, `rawJson`
 
-`ioBroker.zendure-ip`
+Excluded on purpose:
 
-Then install with ioBroker from GitHub / URL.
+- `inHems`
+- `smartMode`
+- `socLimit`
+- `wearLevelPct`
 
-## Notes
+## HEMS aggregation
 
-- This adapter polls `http://<ip>/properties/report`
-- It is intended for local Zendure devices that expose this JSON endpoint
-- State creation is dynamic and based on the received JSON structure
+If at least one configured device has `Device is in HEMS` enabled, the adapter creates `HEMS.*` states with aggregated values like:
+
+- `socAvg`
+- `acChargingW`
+- `acDischargingW`
+- `acDirectionW`
+- `acPowerW`
+- `solarInputPower`
+- `batteryChargeTotalW`
+- `batteryDischargeTotalW`
+- `batteryNetPowerW`
+- `batteryNetModeText`
+- `minSocPct`
+- `socSetPct`
+
+## Install
+
+Install from GitHub as a custom adapter, for example:
+
+```bash
+ iobroker url https://github.com/Andiweli/ioBroker.zendure-ip
+```
 
 
-## Package update
+## Daily counters
 
-This package was refreshed to version 0.1.2 and now includes a real adapter icon.
+The adapter creates per-device daily counters under `<device>.today` and aggregated HEMS daily counters under `HEMS.today`.
