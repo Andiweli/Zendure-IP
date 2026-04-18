@@ -19,7 +19,7 @@
 
 > [!NOTE]
 > This adapter is **read-only**. It does not control Zendure devices; it reads data and generates daily counters.  
-> For full control features, the recommended adapter is **nograx' Zendure adapter**: `https://github.com/nograx/ioBroker.zendure-solarflow`
+> For full control features, the recommended adapter is [nograx' Zendure adapter](https://github.com/nograx/ioBroker.zendure-solarflow).
 
 ## <img src="icons/features.svg" width="18" alt="" /> Features
 
@@ -44,18 +44,6 @@ Each device gets a compact state set such as:
 - `packNum`
 - `online`, `lastUpdate`, `ageSec`, `stale`, `rssi`, `lastError`, `rawJson`
 - `deviceIsInHems`
-
-### <img src="icons/clean.svg" width="17" alt="" /> Removed on purpose
-
-To keep the object tree clean, these are not created anymore:
-
-- `version`
-- `minSocRaw`
-- `socSetRaw`
-- `smartMode`
-- `inHems`
-- `socLimit`
-- `wearLevelPct`
 
 ## <img src="icons/daily.svg" width="18" alt="" /> Daily counters
 
@@ -88,7 +76,7 @@ The adapter configuration page is intentionally small:
 
 - The adapter is designed for **local readout only**
 - No write/control commands are sent to Zendure devices
-- HEMS aggregation is built from the devices you explicitly mark with **Device is in HEMS**
+- For an even more detailed adapter including control of your Zendure devices, please use the [Zendure SolarFlow Adapter from nograx](https://github.com/nograx/ioBroker.zendure-solarflow).
 
 ## <img src="icons/license.svg" width="18" alt="" /> License
 
