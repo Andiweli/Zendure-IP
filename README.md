@@ -21,7 +21,7 @@
 > This adapter is **read-only**. It does not control Zendure devices; it reads data and generates daily counters.  
 > For full control features, the recommended adapter is **nograx' Zendure adapter**: `https://github.com/nograx/ioBroker.zendure-solarflow`
 
-## <img src="docs/icons/features.svg" width="18" alt="" /> Features
+## <img src="icons/features.svg" width="18" alt="" /> Features
 
 - Poll up to **10 Zendure devices** locally
 - Device name becomes the folder name under the adapter namespace
@@ -31,7 +31,7 @@
 - Per-device daily counters under `device-name/today`
 - Aggregated daily counters under `HEMS/today`
 
-## <img src="docs/icons/devices.svg" width="18" alt="" /> Device objects
+## <img src="icons/devices.svg" width="18" alt="" /> Device objects
 
 Each device gets a compact state set such as:
 
@@ -45,7 +45,7 @@ Each device gets a compact state set such as:
 - `online`, `lastUpdate`, `ageSec`, `stale`, `rssi`, `lastError`, `rawJson`
 - `deviceIsInHems`
 
-### <img src="docs/icons/clean.svg" width="17" alt="" /> Removed on purpose
+### <img src="icons/clean.svg" width="17" alt="" /> Removed on purpose
 
 To keep the object tree clean, these are not created anymore:
 
@@ -57,9 +57,9 @@ To keep the object tree clean, these are not created anymore:
 - `socLimit`
 - `wearLevelPct`
 
-## <img src="docs/icons/daily.svg" width="18" alt="" /> Daily counters
+## <img src="icons/daily.svg" width="18" alt="" /> Daily counters
 
-### <img src="docs/icons/device-day.svg" width="17" alt="" /> Per device
+### <img src="icons/device-day.svg" width="17" alt="" /> Per device
 
 Under `device-name/today`:
 
@@ -67,7 +67,7 @@ Under `device-name/today`:
 - `acExportTodayKWh`
 - for `2400pro` also `pvToBatteryTodayKWh`
 
-### <img src="docs/icons/hems.svg" width="17" alt="" /> HEMS aggregate
+### <img src="icons/hems.svg" width="17" alt="" /> HEMS aggregate
 
 Under `HEMS/today`:
 
@@ -75,7 +75,7 @@ Under `HEMS/today`:
 - `acExportTodayKWh`
 - `pvToBatteryTodayKWh`
 
-## <img src="docs/icons/config.svg" width="18" alt="" /> Configuration
+## <img src="icons/config.svg" width="18" alt="" /> Configuration
 
 The adapter configuration page is intentionally small:
 
@@ -84,12 +84,12 @@ The adapter configuration page is intentionally small:
 - **Interval (s)**
 - **Device is in HEMS**
 
-## <img src="docs/icons/notes.svg" width="18" alt="" /> Notes
+## <img src="icons/notes.svg" width="18" alt="" /> Notes
 
 - The adapter is designed for **local readout only**
 - No write/control commands are sent to Zendure devices
 - HEMS aggregation is built from the devices you explicitly mark with **Device is in HEMS**
 
-## <img src="docs/icons/license.svg" width="18" alt="" /> License
+## <img src="icons/license.svg" width="18" alt="" /> License
 
 MIT
