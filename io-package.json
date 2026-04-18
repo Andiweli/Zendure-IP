@@ -1,7 +1,7 @@
 {
   "common": {
     "name": "zendure-ip",
-    "version": "0.0.8",
+    "version": "0.0.9",
     "news": {
       "0.0.7": {
         "en": "Updated the adapter icon and refreshed the README styling with green section icons.",
@@ -34,6 +34,10 @@
       "0.0.8": {
         "en": "README icons refined and green theme adjusted.",
         "de": "README-Icons verfeinert und Grünton angepasst."
+      },
+      "0.0.9": {
+        "en": "Simplified the config page to a single settings page and improved the formatting and note section.",
+        "de": "Die Konfigurationsseite auf eine einzelne Einstellungsseite vereinfacht und die Formatierung sowie den Hinweisbereich verbessert."
       }
     },
     "titleLang": {
