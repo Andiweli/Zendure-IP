@@ -80,4 +80,10 @@ The adapter configuration page is intentionally small:
 
 ## <img src="icons/license.svg" width="18" alt="" /> License
 
-MIT
+This project is licensed under the **MIT License**.
+
+You may use, modify, and distribute this software in private and commercial environments, provided that the original copyright notice and license text are included in any substantial portions of the software.
+
+The software is provided **"as is"**, without warranty of any kind.
+
+Copyright (c) 2025 Andreas Stürmer
